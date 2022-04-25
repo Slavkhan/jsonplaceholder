@@ -1,0 +1,35 @@
+.header {
+  @extend .d-flex, .w-100, .py-0, .bg-dark;
+  &-logo {
+    width: 72px;
+    height: 72px;
+    background: #7c5dfa;
+    border-radius: 0px 20px 20px 0px;
+    position: relative;
+    @include flex-center;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba($color-secondary-dark-hov, 0.2);
+      top: 50%;
+      border-radius: 0px 20px 20px 0px;
+      transform: rotate(180deg);
+    }
+  }
+
+  &-avatar {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    @include flex-center;
+    &-image {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+}

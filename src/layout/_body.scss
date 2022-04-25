@@ -1,0 +1,5 @@
+body {
+  @extend .bg-light;
+  @include respond(big-desktop) {
+  }
+}

@@ -1,0 +1,48 @@
+.users-container {
+  @extend .container, .pt-5;
+  .users-row {
+    @extend .row, .gap-5, .my-5, .justify-content-center;
+  }
+  .users-filter {
+    @extend .d-flex;
+    &-input {
+      @extend .text-field, .mt-0, .mx-5, .w-100;
+      input {
+        @extend .mt-0;
+      }
+    }
+  }
+  .users-card {
+    @extend .border-radius-8, .p-5, .card-shadow, .border-0;
+    &-title {
+      @extend .text-dark, .text-decoration-none;
+    }
+    &-id {
+      @extend .mb-3;
+    }
+    &-list {
+      @extend .p-0, .text-md-end, .mb-4, .text-secondary;
+    }
+    &-link {
+      @extend .text-decoration-none;
+      &:hover {
+        @extend .text-secondary;
+      }
+    }
+    &-body {
+      @extend .p-0, .d-md-flex, .justify-content-between;
+      &-section {
+        @extend .d-flex, .flex-column;
+      }
+    }
+    &-subcard {
+      @extend .p-0, .text-center, .border-radius-8, .border-0;
+      &-body {
+        @extend .bg-light;
+      }
+      &-footer {
+        @extend .bg-dark, .text-muted, .border-0;
+      }
+    }
+  }
+}

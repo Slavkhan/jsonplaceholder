@@ -1,0 +1,24 @@
+.text-field {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  p {
+    @extend .body-1;
+    color: #7e88c3;
+  }
+  input {
+    background-color: #fff;
+    margin-top: 10px;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 16px;
+    border: solid 1px #dfe3fa;
+    border-radius: 4px;
+  }
+  input:focus-visible {
+    outline: solid 1px $color-primary-hov;
+  }
+  input::placeholder {
+    opacity: 0.4;
+  }
+}

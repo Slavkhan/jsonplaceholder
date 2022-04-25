@@ -1,0 +1,24 @@
+.offcanvas {
+  @extend .p-2;
+
+  margin-top: 72px;
+  @include respond(tab) {
+    border-radius: 0px 20px 20px 0px;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 4px;
+    height: 5rem;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  &-start {
+    @include respond(tab) {
+      min-width: 616px;
+    }
+  }
+}
