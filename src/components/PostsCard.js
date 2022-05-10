@@ -9,15 +9,16 @@ export default function PostsCard({id, title, body, username}) {
           <h2 className="posts-card-id">
             <label>#</label>
             {id}
+            &nbsp;
+            <Link state={username} to={JSON.stringify(id)}>
+              {title}
+            </Link>
           </h2>
 
-          <Link className="post-card-link" state={username} to={JSON.stringify(id)}>
-            <h2 className="posts-card-title">{title}</h2>
-          </Link>
-          <p className="posts-card-title">{body}</p>
+          <label>{body}</label>
         </div>
         <div className="post-card-body-section">
-          <label>{username}</label>
+          <p>{username}</p>
         </div>
       </Card.Body>
     </Card>

@@ -1,15 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import {useContext} from 'react';
+import {ThemeContext} from '../App';
 
 function ToggleSwitch() {
-  const [isToggled, setIsToggled] = useState(false);
+  const {handleTheme, darkTheme} = useContext(ThemeContext);
   const onToggle = () => {
-    setIsToggled(!isToggled);
+    handleTheme();
   };
-  useEffect(() => {}, []);
   return (
     <div className="toggle-switch-container">
       <label className="toggle-switch">
-        <input type="checkbox" checked={isToggled} onChange={onToggle} />
+        <input type="checkbox" checked={!!darkTheme} onChange={onToggle} />
         <span className="switch" />
       </label>
     </div>

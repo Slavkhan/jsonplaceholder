@@ -19,6 +19,7 @@ const LoginForm = () => {
     console.log(data);
     if (!!data.length) {
       dispatch(authSlice.actions.login(data[0]));
+      localStorage.setItem('userId', data[0].id);
       toast.success('Login Succesful', {position: 'top-left'});
     } else {
       console.log('sdasd');

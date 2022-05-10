@@ -53,6 +53,7 @@ export default function Users() {
           {filteredUsers.map((user, key) => {
             return <UserCard key={user.name + key} className {...user} />;
           })}
+          {/* {!filteredUsers && <NothingHere/>} */}
         </div>
       </div>
     </>

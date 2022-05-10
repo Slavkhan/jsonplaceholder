@@ -1,9 +1,8 @@
-import {Navbar, Dropdown, SplitButton} from 'react-bootstrap';
+import {Navbar, Dropdown, SplitButton, Nav, Container} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import ToggleSwitch from '../components/ToggleSwitch';
 import {useDispatch, useSelector} from 'react-redux';
 import {authSlice} from '../store/reducers/auth';
-
 const links = [
   {
     location: '/users',
@@ -23,6 +22,7 @@ const UserMenu = ({name}) => {
   const dispatch = useDispatch();
   const handleLogout = () => {
     dispatch(authSlice.actions.logout());
+    localStorage.removeItem('userId');
   };
 
   return (
@@ -48,20 +48,22 @@ const UserMenu = ({name}) => {
 
 const Header = () => {
   const {currentUser} = useSelector((state) => state.auth);
-  const Links = () =>
-    links.map((link) => (
-      <Link key={link.label} to={link.location}>
-        {link.label}
-      </Link>
-    ));
+
   return (
     <>
-      <Navbar className="header" sticky="top">
-        <div className="header-logo">
-          <img className="header-logo-image" src="../assets/logo.svg" alt="logo" />
-        </div>
-
-        <Links />
+      <Navbar className="header" sticky="top" bg="dark" variant="dark">
+        <Link to={'/'}>
+          <Navbar.Brand className="header-logo">
+            <img className="header-logo-image" src="../assets/logo.svg" alt="logo" />
+          </Navbar.Brand>
+        </Link>
+        <Nav className="me-auto">
+          {links.map((link) => (
+            <Nav.Link as="div" key={link.label}>
+              <Link to={link.location}>{link.label}</Link>
+            </Nav.Link>
+          ))}
+        </Nav>
         <ToggleSwitch />
         {currentUser && <UserMenu name={currentUser.name} />}
       </Navbar>

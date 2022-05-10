@@ -18,3 +18,10 @@ export const fetchPost = async (id) => {
 export const login = async (email) => {
   return axios.get(`${BASE_URL}/users?email=${email}`);
 };
+export const createUser = async (body) => {
+  return axios.post(`${BASE_URL}/users/`, body, {
+    headers: {
+      auth: 'Bearer adsafdasnfjnasjfnkjasnfkjansjkfnjasnfkjasnkfjnsajnfkjasnfkjnasjfnkjasnfkjnasfkjnasjfn',
+    },
+  });
+};

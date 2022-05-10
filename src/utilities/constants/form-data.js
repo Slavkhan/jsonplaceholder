@@ -43,154 +43,154 @@ export const registrationForm = [
           className: 'registration-form-input',
         },
         field: {
-          type: 'text',
+          type: 'password',
           required: true,
           name: 'pass',
         },
       },
     ],
   },
-  {
-    groupName: 'Address info',
-    formFields: [
-      {
-        label: {
-          name: 'Street',
-          className: 'registration-form-input',
-        },
-        field: {
-          type: 'text',
-          required: true,
-          name: 'street',
-        },
-      },
-      {
-        label: {
-          name: 'Suite',
-          className: 'registration-form-input w-30',
-        },
-        field: {
-          type: 'text',
-          required: true,
-          name: 'suite',
-        },
-      },
-      {
-        label: {
-          name: 'City',
-          className: 'registration-form-input w-30',
-        },
-        field: {
-          type: 'text',
-          required: true,
-          name: 'city',
-        },
-      },
-      {
-        label: {
-          name: 'Zipcode',
-          className: 'registration-form-input w-30',
-        },
-        field: {
-          type: 'text',
-          required: true,
-          name: 'zipcode',
-        },
-      },
-    ],
-  },
-  {
-    groupName: 'Geo',
-    formFields: [
-      {
-        label: {
-          name: 'Latitude',
-          className: 'registration-form-input w-45',
-        },
-        field: {
-          type: 'text',
-          required: true,
-          name: 'lat',
-        },
-      },
-      {
-        label: {
-          name: 'Longitude',
-          className: 'registration-form-input w-45',
-        },
-        field: {
-          type: 'text',
-          required: true,
-          name: 'lng',
-        },
-      },
-    ],
-  },
-  {
-    groupName: 'Contact',
-    formFields: [
-      {
-        label: {
-          name: 'Phone',
-          className: 'registration-form-input',
-        },
-        field: {
-          type: 'telephone',
-          required: true,
-          name: 'phone',
-        },
-      },
-      {
-        label: {
-          name: 'Website',
-          className: 'registration-form-input',
-        },
-        field: {
-          type: 'text',
-          required: true,
-          name: 'website',
-        },
-      },
-    ],
-  },
-  {
-    groupName: 'Company',
-    formFields: [
-      {
-        label: {
-          name: 'Name',
-          className: 'registration-form-input',
-        },
-        field: {
-          type: 'text',
-          required: true,
-          name: 'companyName',
-        },
-      },
-      {
-        label: {
-          name: 'Catch Phrases',
-          className: 'registration-form-input',
-        },
-        field: {
-          type: 'text',
-          required: true,
-          name: 'catchPhrase',
-        },
-      },
-      {
-        label: {
-          name: 'Services',
-          className: 'registration-form-input',
-        },
-        field: {
-          type: 'text',
-          required: true,
-          name: 'bs',
-        },
-      },
-    ],
-  },
+  // {
+  //   groupName: 'Address info',
+  //   formFields: [
+  //     {
+  //       label: {
+  //         name: 'Street',
+  //         className: 'registration-form-input',
+  //       },
+  //       field: {
+  //         type: 'text',
+  //         required: false,
+  //         name: 'street',
+  //       },
+  //     },
+  //     {
+  //       label: {
+  //         name: 'Suite',
+  //         className: 'registration-form-input w-30',
+  //       },
+  //       field: {
+  //         type: 'text',
+  //         required: false,
+  //         name: 'suite',
+  //       },
+  //     },
+  //     {
+  //       label: {
+  //         name: 'City',
+  //         className: 'registration-form-input w-30',
+  //       },
+  //       field: {
+  //         type: 'text',
+  //         required: false,
+  //         name: 'city',
+  //       },
+  //     },
+  //     {
+  //       label: {
+  //         name: 'Zipcode',
+  //         className: 'registration-form-input w-30',
+  //       },
+  //       field: {
+  //         type: 'text',
+  //         required: false,
+  //         name: 'zipcode',
+  //       },
+  //     },
+  //   ],
+  // },
+  // {
+  //   groupName: 'Geo',
+  //   formFields: [
+  //     {
+  //       label: {
+  //         name: 'Latitude',
+  //         className: 'registration-form-input w-45',
+  //       },
+  //       field: {
+  //         type: 'text',
+  //         required: false,
+  //         name: 'lat',
+  //       },
+  //     },
+  //     {
+  //       label: {
+  //         name: 'Longitude',
+  //         className: 'registration-form-input w-45',
+  //       },
+  //       field: {
+  //         type: 'text',
+  //         required: false,
+  //         name: 'lng',
+  //       },
+  //     },
+  //   ],
+  // },
+  // {
+  //   groupName: 'Contact',
+  //   formFields: [
+  //     {
+  //       label: {
+  //         name: 'Phone',
+  //         className: 'registration-form-input',
+  //       },
+  //       field: {
+  //         type: 'telephone',
+  //         required: false,
+  //         name: 'phone',
+  //       },
+  //     },
+  //     {
+  //       label: {
+  //         name: 'Website',
+  //         className: 'registration-form-input',
+  //       },
+  //       field: {
+  //         type: 'text',
+  //         required: false,
+  //         name: 'website',
+  //       },
+  //     },
+  //   ],
+  // },
+  // {
+  //   groupName: 'Company',
+  //   formFields: [
+  //     {
+  //       label: {
+  //         name: 'Name',
+  //         className: 'registration-form-input',
+  //       },
+  //       field: {
+  //         type: 'text',
+  //         required: false,
+  //         name: 'companyName',
+  //       },
+  //     },
+  //     {
+  //       label: {
+  //         name: 'Catch Phrases',
+  //         className: 'registration-form-input',
+  //       },
+  //       field: {
+  //         type: 'text',
+  //         required: false,
+  //         name: 'catchPhrase',
+  //       },
+  //     },
+  //     {
+  //       label: {
+  //         name: 'Services',
+  //         className: 'registration-form-input',
+  //       },
+  //       field: {
+  //         type: 'text',
+  //         required: false,
+  //         name: 'bs',
+  //       },
+  //     },
+  //   ],
+  // },
 ];
 export const defaultRegistrationValues = () => {
   const initialValues = {};
